@@ -29,7 +29,9 @@ Swagger => http://localhost:5027/swagger
 4. Levantar el frontend
 
 cd frontend
+
 npm install
+
 npm run dev
 
 La aplicación web queda disponible en => http://localhost:5173
