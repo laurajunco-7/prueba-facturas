@@ -1,0 +1,19 @@
+services:
+  mongodb:
+    image: mongo:latest
+    container_name: mongo-facturacion
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo_data:/data/db
+      - ./database/semilla.js:/docker-entrypoint-initdb.d/semilla.js:ro
+
+  mailpit:
+    image: axllent/mailpit:latest
+    container_name: mailpit-facturacion
+    ports:
+      - "1025:1025"
+      - "8025:8025"
+
+volumes:
+  mongo_data:
